@@ -50,7 +50,7 @@ let consumer
 const createWorker = async () => {
   worker = await mediasoup.createWorker({
     rtcMinPort: 2000,
-    rtcMaxPort: 2020,
+    rtcMaxPort: 2100,
   })
   console.log(`worker pid ${worker.pid}`)
 
@@ -220,9 +220,9 @@ const createWebRtcTransport = async (callback) => {
     const webRtcTransport_options = {
       listenIps: [
         {
-          ip: '127.0.0.1', // replace with relevant IP address
-         // announcedIp: '127.0.0.1',
-          announcedIp: '44bf-197-210-84-69.ngrok-free.app'
+          ip: '192.168.0.178', // replace with relevant IP address
+         // announcedIp: '192.168.0.178',
+         //announcedIp: 'https://d5b1-102-90-57-32.ngrok-free.app'
       
         }
       ],
